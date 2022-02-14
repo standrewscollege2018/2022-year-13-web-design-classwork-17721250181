@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="overwrite.css">
+    <title>stac</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color:#003155">
+      <div class="container-fluid">
+        <!-- Logo -->
+        <a class="navbar-brand text-center" href="#">
+          <img src="images\staclogo.png" alt="StacLogo" style="max-width:50%; height:auto;">
+        </a>
+        <!-- Button to expend navbar -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">News</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                About us
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Ab</a></li>
+                <li><a class="dropdown-item" href="#">Out</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">us</a></li>
+              </ul>
+            </li>
+          </ul>
+          <!-- Book a tour button -->
+          <button type="button" class="btn text-white me-4" data-bs-toggle="modal" data-bs-target="#bookatour">
+            Book a tour
+          </button>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <div class="container-fluid">
+      <!-- Book a tour modul -->
+      <div class="modal fade" id="bookatour" tabindex="-1" aria-labelledby="bookatourModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title" id="bookatourLabel">Book a tour</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <label for="nameinput" class="form-label">name</label>
+                <input type="input" class="form-control" id="nameinput">
+                <br>
+                <label for="emailinput" class="form-label">Email</label>
+                <input type="email" class="form-control" id="emailinput">
+                <br>
+                <label for="phoneinput" class="form-label">Phone number</label>
+                <input type="input" class="form-control" id="phonenumber">
+                <br>
+                <label for="emailinput" class="form-label">Tour date and time</label>
+                <input type="datetime-local" class="form-control" id="datetimeinput">
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal">Submit</button>
+              <button type="button" class="btn btn-secondary"  data-bs-toggle="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Body content starts here -->
+      <!-- Row and col for title card -->
+      <div class="row">
+        <div class="col-12 mt-4">
+          <div class="card mx-3" style="background-color:;">
+            <div class="card-body">
+              <h3 class="card-title display-5 my-3">St Andrew's College - Framing our future</h3>
+              <h6 class="card-subtitle text-secondary my-3">Together, building better people, for life</h6>
+              <hr>
+              <p class="card-text">
+              Our vision is to be at the leading edge of high performance educational practice, in a community which values caring for others, tradition and creativity, in order to provide young people with the roots and wings to flourish in an ever-changing world.
+              </p>
+              <br>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- New row for content -->
+      <div class="row g-4 mx-1 my-1">
+        <!-- card for content -->
+        <div class="col-12 col-lg-4">
+          <div class="card">
+            <img class="card-img-top" src="images/chapel.jpg" alt="">
+            <h5 class="card-title m-3">Beautiful facilities</h5>
+            <p class="card-text mx-3 mb-2">Built after the 2011 earthquakes, our award-winning chapel is a great place to be at peace.</p>
+          </div>
+        </div>
+        <!-- card for content -->
+        <div class="col-12 col-lg-4">
+          <div class="card">
+            <img class="card-img-top" src="images/rugby.jpg" alt="">
+            <h5 class="card-title m-3">Competitive sports</h5>
+            <p class="card-text mx-3 mb-2">We have highly-qualified coaches in a wide variety of sports.</p>
+          </div>
+        </div>
+        <!-- card for content -->
+        <div class="col-12 col-lg-4">
+          <div class="card">
+            <img class="card-img-top" src="images/production.jpg" alt="">
+            <h5 class="card-title m-3">The arts</h5>
+            <p class="card-text mx-3 mb-2">Our stunning productions are amazing and enthrall their audiences.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- footer -->
+    <footer>
+      <div class="container-fluid mt-4">
+        <div class="row">
+          <div class="col-12" style="background-color:#003155;">
+            <p class="text-center text-light m-4">� St Andrew's College - 347 Papanui Road, Christchurch 8052, 03 940 2000</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  </body>
+</html>
