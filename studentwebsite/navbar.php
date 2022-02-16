@@ -7,7 +7,7 @@ $tutor_aa = mysqli_fetch_assoc($tutor_qry);
 <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color:#003155">
   <div class="container-fluid">
     <a class="navbar-brand text-center" href="index.php"><h1>St Andrew's College</h1></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -30,10 +30,10 @@ $tutor_aa = mysqli_fetch_assoc($tutor_qry);
           </ul>
         </li>
       </ul>
-        <form class="" action="index.php?page=searchresults" method="post">
-          <label for="nameinput" class="form-label text-light">Search sdutent's name</label>
-          <input required type="text" name="form-control" placeholder="Student name" id="nameinput">
-          <button type="submit" class="btn btn-primary" name="button">Search</button>
+        <form class="d-flex" action="index.php?page=searchresults" method="post">
+          <label for="nameinput" class="form-label text-light">Search for student</label>
+          <input required type="text" class="form-control mx-2" name="search" placeholder="Student name" id="nameinput">
+          <button type="submit" class="btn btn-outline-primary" name="button">Search</button>
         </form>
       </div>
     </div>
