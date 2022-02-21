@@ -28,14 +28,16 @@ if(!isset($_GET['tutorgroupID'])) {
       $firstname = $tutor_aa['firstname'];
       $lastname = $tutor_aa['lastname'];
       $photo = $tutor_aa['photo'];
-
-      echo "<div class='col-12 col-md-6 col-lg-4 col-xl-3 text-center'>";
-      echo "<div class='card>";
-      echo "<img class='card-img-top' src='images/$photo' alt='img'>";
-      echo "<div class='card-body'>";
-      echo "<p class='card-text'>$firstname $lastname</p>";
-      echo "</div></div></div>";
-
+      ?>
+      <div class='col-12 col-md-6 col-lg-4 col-xl-3 text-center'>
+        <div class='card'>
+          <img class='card-img-top' src='images/<?php echo "$photo"; ?>' alt='img'>
+          <div class='card-body'>
+            <p class='card-text'><?php echo "$firstname $lastname"; ?></p>
+          </div>
+        </div>
+      </div>
+      <?php
     } while ($tutor_aa = mysqli_fetch_assoc($tutor_qry));
   }
 }

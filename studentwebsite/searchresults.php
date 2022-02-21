@@ -8,8 +8,11 @@
 
   $result_qry = mysqli_query($dbconnect, $result_sql);
 
+?>
+<div class="row g-4 m-2">
+<?php
   if(mysqli_num_rows($result_qry)==0) {
-      echo "<h1>No results found</h1>";
+      echo "<h1 class='text-center my-5 display-1'>No results found</h1>";
     } else {
       $result_aa = mysqli_fetch_assoc($result_qry);
 
@@ -19,13 +22,18 @@
         $photo = $result_aa['photo'];
         ?>
 
-
-          <img src="images/<?php echo $photo; ?>" class="" alt="">
-          <p><?php echo "$firstname $lastname"; ?></p>
+        <div class='col-12 col-md-6 col-lg-4 col-xl-3 text-center'>
+          <div class='card'>
+            <img src="images/<?php echo $photo; ?>" class="card-img-top" alt="photo">
+            <div class="card-body">
+              <p class="card-text"><?php echo "$firstname $lastname"; ?></p>
+            </div>
+          </div>
+        </div>
       <?php
         } while ($result_aa = mysqli_fetch_assoc($result_qry));
 
 
   }
-
  ?>
+</div>

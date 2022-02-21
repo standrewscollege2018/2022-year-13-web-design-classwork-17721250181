@@ -14,7 +14,7 @@ $tutor_aa = mysqli_fetch_assoc($tutor_qry);
       <ul class="navbar-nav me-auto">
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"  data-bs-toggle="dropdown" aria-expanded="false">
-            <h4>Tutor groups</h4>
+            Tutor groups
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 
