@@ -1,14 +1,14 @@
 <div class="container-fluid">
 <?php
   // To know did error happened
-  if (isset($_GET['tutorexisterror'])) {
+  if (isset($_GET['addtutorerror'])) {
     // $tutorexisterror=$_GET['tutorexisterror'];
     ?>
     <div class="row mx-5 mt-4">
       <div class="col-12">
         <div class="alert alert-danger alert-dismissible fade show" role="alert">
-          <i class="bi bi-exclamation-triangle"></i>
-          <strong>Gosh!</strong> You have put a tutor who is already exist.
+          <i class="bi bi-exclamation-triangle"></i>&nbsp
+          <strong>Gosh!</strong>&nbsp<?php echo $_GET['addtutorerror']; ?>
           <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
       </div>

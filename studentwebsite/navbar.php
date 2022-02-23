@@ -34,6 +34,11 @@ $tutor_aa = mysqli_fetch_assoc($tutor_qry);
             <p>Add Tutor</p>
           </a>
         </li>
+        <li class="nav-item">
+          <a href="index.php?page=addstudent">
+            <p>Add Student</p>
+          </a>
+        </li>
       </ul>
         <form class="d-flex" action="index.php?page=searchresults" method="post">
           <label for="nameinput" class="form-label text-light">Search for student</label>
