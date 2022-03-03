@@ -1,29 +1,25 @@
 <?php
 
   include("dbconnect.php");
-  if (!isset($_POST['tutorname']) or !isset($_POST['tutorcode'])) {
-    header("Location:index.php?page=addtutor");
+  if (!isset($_POST['firstname']) or !isset($_POST['lastname'])) {
+    header("Location:index.php?page=addstudent");
   }
   else {
-    $tutorname=$_POST['tutorname'];
-    $tutorcode=strtoupper($_POST['tutorcode']);
+    $firstname=$_POST['firstname'];
+    $lastname=$_POST['lastname'];
     // Check the length of the Code
-    if (strlen($tutorcode)!=3) {
-      header("Location:index.php?page=addtutor&addtutorerror=The tutor code's must be three letter long.");
+      // Check is name/code already exist
+    $mysqli_sql = "SELECT * FROM `tutorgroup` WHERE tutor='$tutorname' OR tutorcode='$tutorcode'";
+    $mysqli_qry = mysqli_query($dbconnect, $mysqli_sql);
+    if (mysqli_num_rows($mysqli_qry)!=0) {
+      header("Location:index.php?page=addtutor&addtutorerror=You have put a tutor who is already exist.");
     }
     else {
-      // Check is name/code already exist
-      $mysqli_sql = "SELECT * FROM `tutorgroup` WHERE tutor='$tutorname' OR tutorcode='$tutorcode'";
-      $mysqli_qry = mysqli_query($dbconnect, $mysqli_sql);
-      if (mysqli_num_rows($mysqli_qry)!=0) {
-        header("Location:index.php?page=addtutor&addtutorerror=You have put a tutor who is already exist.");
-      }
-      else {
-        $mysqli_sql = "INSERT INTO tutorgroup (tutor, tutorcode) VALUES ('$tutorname', '$tutorcode')";
-        echo $mysqli_query;
-        mysqli_query($dbconnect, $mysqli_sql);
-      }
+      $mysqli_sql = "INSERT INTO tutorgroup (tutor, tutorcode) VALUES ('$tutorname', '$tutorcode')";
+      echo $mysqli_query;
+      mysqli_query($dbconnect, $mysqli_sql);
     }
+
   }
 
  ?>

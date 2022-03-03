@@ -21,7 +21,7 @@
       <form class="" action="enterstudent.php" method="post">
         <div class="mb-3">
           <label for="firstname" class="form-label">First Name</label>
-          <input name="firstrname" type="text" class="form-control" id="firstname" aria-describedby="firstname" required>
+          <input name="firstname" type="text" class="form-control" id="firstname" aria-describedby="firstname" required>
         </div>
         <div class="mb-3">
           <label for="lastname" class="form-label">Last Name</label>
@@ -29,11 +29,20 @@
         </div>
         <!-- Tutorgroup -->
         <div class="mb-3">
-          <select class="form-select" aria-label="Default select example">
-            <option selected>Open this select menu</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
+          <label for="Tutorgroup" class="form-label">Sellect student's tutorgroup</label>
+          <select name="tutorgroup" class="form-select" aria-label="select tutorgroup">
+            <?php
+              $tutor_sql = "SELECT tutorgroupID,tutorcode FROM `tutorgroup` WHERE 1";
+              $tutor_qry = mysqli_query($dbconnect, $tutor_sql);
+              $tutor_aa = mysqli_fetch_assoc($tutor_qry);
+              do {
+                $tutorgroupID = $tutor_aa['tutorgroupID'];
+                $tutorcode = $tutor_aa['tutorcode'];
+
+                echo "<option value='$tutorgroupID'>$tutorcode</option>";
+
+                } while ($tutor_aa = mysqli_fetch_assoc($tutor_qry))
+             ?>
           </select>
         </div>
         <!-- Photo -->
