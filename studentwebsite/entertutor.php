@@ -20,7 +20,6 @@
       }
       else {
         $mysqli_sql = "INSERT INTO tutorgroup (tutor, tutorcode) VALUES ('$tutorname', '$tutorcode')";
-        echo $mysqli_query;
         mysqli_query($dbconnect, $mysqli_sql);
       }
     }
