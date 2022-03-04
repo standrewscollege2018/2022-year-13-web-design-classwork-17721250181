@@ -1,19 +1,6 @@
 <div class="container-fluid">
   <?php
-    // check session
-    if (isset($_SESSION['permission'])) {
-      ?>
-      <div class="row mx-5 mt-4">
-        <div class="col-12">
-          <h1 class="text-center display-1">You have already loged in.</h1>
-          <a href="home.php">Back to home</a>
-        </div>
-      </div>
-      <?php
-    }
-    else {
-    // To know did error happened
-      if (isset($_GET['loginerror'])) {
+      if (isset($_GET['registererror'])) {
         ?>
         <div class="row mx-5 mt-4">
           <div class="col-12">
@@ -29,12 +16,11 @@
       ?>
       <div class="row mx-5 my-4">
         <div class="col-12">
-            <h1 class="display-4">Login</h1>
+            <h1 class="display-4">Register</h1>
         </div>
         <div class="col-12">
-          <form class="" action="loginchcek.php" method="post">
+          <form class="" action="registercheck.php" method="post">
             <div class="mb-3">
-              <label for="username" class="form-label">Username</label>
               <input name="username" type="text" class="form-control" id="username" aria-describedby="username" required>
             </div>
             <div class="mb-3">
