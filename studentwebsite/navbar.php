@@ -40,6 +40,7 @@ $tutor_aa = mysqli_fetch_assoc($tutor_qry);
           </a>
         </li>
       </ul>
+        <a href="logininput.php">Login</a>
         <form class="d-flex" action="index.php?page=searchresults" method="post">
           <label for="nameinput" class="form-label text-light">Search for student</label>
           <input required type="text" class="form-control mx-2" name="search" placeholder="Student name" id="nameinput">
