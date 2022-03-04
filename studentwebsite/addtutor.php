@@ -1,5 +1,9 @@
 <div class="container-fluid">
 <?php
+  // check session
+  if ($_SESSION['permission']!='admin') {
+    header("Location:index.php?page=logininput&loginerror=you need to be admin to access this page");
+  }
   // To know did error happened
   if (isset($_GET['addtutorerror'])) {
     // $tutorexisterror=$_GET['tutorexisterror'];
