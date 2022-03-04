@@ -21,6 +21,7 @@
         <div class="col-12">
           <form class="" action="registercheck.php" method="post">
             <div class="mb-3">
+              <label for="username" class="form-label">Username</label>
               <input name="username" type="text" class="form-control" id="username" aria-describedby="username" required>
             </div>
             <div class="mb-3">
