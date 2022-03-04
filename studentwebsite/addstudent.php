@@ -1,6 +1,7 @@
 <div class="container-fluid">
 <?php
   // check session
+  session_start();
   if ($_SESSION['permission']!='admin') {
     header("Location:index.php?page=logininput&loginerror=you need to be admin to access this page");
   }
